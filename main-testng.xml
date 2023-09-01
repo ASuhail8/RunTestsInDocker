@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+    <test name="MyTest" parallel="true">
+        <classes>
+            <class name="com.example.tests.amazon.AmazonTest"/>
+            <class name="com.example.tests.flipkart.FlipkartTest"/>
+            <class name="com.example.tests.facebook.FacebookTest"/>
+            <class name="com.example.tests.google.GoogleTest"/>
+        </classes>
+    </test>
+</suite>
