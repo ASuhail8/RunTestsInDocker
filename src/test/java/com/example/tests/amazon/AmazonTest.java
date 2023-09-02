@@ -1,5 +1,6 @@
 package com.example.tests.amazon;
 
+import com.example.TestComponents.BaseTest;
 import com.example.Utils.PropertyClass;
 import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebDriver;
@@ -9,19 +10,11 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class AmazonTest {
+public class AmazonTest extends BaseTest {
 
     @Test
     public void launchAmazon() throws InterruptedException, IOException {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--disable-extensions");
-        chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("--disable-gpu");
-        chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--incognito");
-        chromeOptions.addArguments("--disable-application-cache");
-        chromeOptions.addArguments("--disable-dev-shm-usage");
-        WebDriver driver = new ChromeDriver(chromeOptions);
+        driver = initializeBrowser();
         driver.get(PropertyClass.getProperty("amazon"));
         System.out.println(driver.getTitle());
         driver.quit();
