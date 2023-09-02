@@ -26,7 +26,7 @@
         </fileSet>
         <fileSet>
             <directory>src/test/resources</directory> <!-- Include test resources -->
-            <outputDirectory>src/test/resources</outputDirectory>
+            <outputDirectory>/</outputDirectory>
         </fileSet>
     </fileSets>
 </assembly>
