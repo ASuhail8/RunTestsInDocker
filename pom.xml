@@ -50,7 +50,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.example.TestRunner</mainClass>
+                                    <mainClass>com.example.Runner.TestRunner</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>

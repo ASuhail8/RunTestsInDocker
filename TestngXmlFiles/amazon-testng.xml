@@ -3,6 +3,8 @@
     <test name="MyTest">
         <classes>
             <class name="com.example.tests.amazon.AmazonTest"/>
+            <class name="com.example.tests.amazon.AmazonTitleTest"/>
+            <class name="com.example.tests.amazon.AmazonLogoTest"></class>
         </classes>
     </test>
 </suite>

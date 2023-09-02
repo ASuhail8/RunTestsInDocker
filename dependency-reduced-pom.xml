@@ -20,7 +20,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.example.TestRunner</mainClass>
+                  <mainClass>com.example.Runner.TestRunner</mainClass>
                 </transformer>
               </transformers>
             </configuration>

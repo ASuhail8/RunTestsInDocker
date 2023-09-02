@@ -1,5 +1,6 @@
 package com.example.TestComponents;
 
+import com.example.Utils.PropertyClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -35,6 +36,7 @@ public class BaseTest {
             edgeOptions.addArguments("--disable-dev-shm-usage");
             driver = new EdgeDriver(edgeOptions);
         }
+        driver.manage().window().maximize();
         return driver;
     }
 

@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-02T16:21:08 IST" name="MyTestSuite" finished-at="2023-09-02T16:21:14 IST" duration-ms="5886">
+  <suite started-at="2023-09-02T17:41:41 IST" name="MyAmazonSuite" finished-at="2023-09-02T17:42:04 IST" duration-ms="22287">
     <groups>
     </groups>
-    <test started-at="2023-09-02T16:21:08 IST" name="MyTest" finished-at="2023-09-02T16:21:14 IST" duration-ms="5886">
-      <class name="com.example.tests.facebook.FacebookTest">
-        <test-method signature="launchFb()[pri:0, instance:com.example.tests.facebook.FacebookTest@727803de]" started-at="2023-09-02T16:21:08 IST" name="launchFb" finished-at="2023-09-02T16:21:12 IST" duration-ms="3404" status="PASS">
+    <test started-at="2023-09-02T17:41:41 IST" name="MyTest" finished-at="2023-09-02T17:42:04 IST" duration-ms="22287">
+      <class name="com.example.tests.amazon.AmazonLogoTest">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.example.tests.amazon.AmazonLogoTest@c540f5a]" started-at="2023-09-02T17:41:58 IST" name="launchBrowser" finished-at="2023-09-02T17:42:02 IST" duration-ms="4683" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchFb -->
-      </class> <!-- com.example.tests.facebook.FacebookTest -->
-      <class name="com.example.tests.flipkart.FlipkartTest">
-        <test-method signature="launchFlipkart()[pri:0, instance:com.example.tests.flipkart.FlipkartTest@2641e737]" started-at="2023-09-02T16:21:08 IST" name="launchFlipkart" finished-at="2023-09-02T16:21:13 IST" duration-ms="4858" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="verifyAmazonLogo()[pri:0, instance:com.example.tests.amazon.AmazonLogoTest@c540f5a]" started-at="2023-09-02T17:42:02 IST" name="verifyAmazonLogo" finished-at="2023-09-02T17:42:04 IST" duration-ms="1294" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchFlipkart -->
-      </class> <!-- com.example.tests.flipkart.FlipkartTest -->
+        </test-method> <!-- verifyAmazonLogo -->
+      </class> <!-- com.example.tests.amazon.AmazonLogoTest -->
       <class name="com.example.tests.amazon.AmazonTest">
-        <test-method signature="launchAmazon()[pri:0, instance:com.example.tests.amazon.AmazonTest@710726a3]" started-at="2023-09-02T16:21:08 IST" name="launchAmazon" finished-at="2023-09-02T16:21:14 IST" duration-ms="5872" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.example.tests.amazon.AmazonTest@23a5fd2]" started-at="2023-09-02T17:41:41 IST" name="launchBrowser" finished-at="2023-09-02T17:41:49 IST" duration-ms="7184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="launchAmazon()[pri:0, instance:com.example.tests.amazon.AmazonTest@23a5fd2]" started-at="2023-09-02T17:41:49 IST" name="launchAmazon" finished-at="2023-09-02T17:41:49 IST" duration-ms="650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchAmazon -->
       </class> <!-- com.example.tests.amazon.AmazonTest -->
-      <class name="com.example.tests.google.GoogleTest">
-        <test-method signature="launchGoogle()[pri:0, instance:com.example.tests.google.GoogleTest@704921a5]" started-at="2023-09-02T16:21:08 IST" name="launchGoogle" finished-at="2023-09-02T16:21:13 IST" duration-ms="4294" status="PASS">
+      <class name="com.example.tests.amazon.AmazonTitleTest">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.example.tests.amazon.AmazonTitleTest@7bb58ca3]" started-at="2023-09-02T17:41:49 IST" name="launchBrowser" finished-at="2023-09-02T17:41:53 IST" duration-ms="3975" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchGoogle -->
-      </class> <!-- com.example.tests.google.GoogleTest -->
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="verifyTitle()[pri:0, instance:com.example.tests.amazon.AmazonTitleTest@7bb58ca3]" started-at="2023-09-02T17:41:53 IST" name="verifyTitle" finished-at="2023-09-02T17:41:58 IST" duration-ms="4378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+      </class> <!-- com.example.tests.amazon.AmazonTitleTest -->
     </test> <!-- MyTest -->
-  </suite> <!-- MyTestSuite -->
+  </suite> <!-- MyAmazonSuite -->
 </testng-results>
