@@ -13,7 +13,13 @@ public class FlipkartTest {
     @Test
     public void launchFlipkart() throws InterruptedException, IOException {
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("headless");
+        chromeOptions.addArguments("--disable-extensions");
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--disable-gpu");
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--incognito");
+        chromeOptions.addArguments("--disable-application-cache");
+        chromeOptions.addArguments("--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get(PropertyClass.getProperty("flipkart"));
         System.out.println(driver.getTitle());
