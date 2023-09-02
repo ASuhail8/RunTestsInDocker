@@ -49,4 +49,4 @@ ADD TestngXmlFiles                                               TestngXmlFiles
 #RUN dos2unix healthcheck.sh
 
 #TAGS
-ENTRYPOINT java -jar my-app-1.0-SNAPSHOT-fat-tests.jar $MODULE
+ENTRYPOINT java -Dbrowser=$BROWSER -jar my-app-1.0-SNAPSHOT-fat-tests.jar $MODULE
