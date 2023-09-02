@@ -14,6 +14,7 @@ public class AmazonTitleTest extends BaseTest {
     public void launchBrowser() {
         driver = initializeBrowser();
         driver.get(PropertyClass.getProperty("amazon"));
+        System.out.println("Browser Launched maximised and amazon entered");
     }
 
     @Test
@@ -21,7 +22,7 @@ public class AmazonTitleTest extends BaseTest {
         driver = initializeBrowser();
         driver.get(PropertyClass.getProperty("amazon"));
         Assert.assertEquals("Amazon.com. Spend less. Smile more.", driver.getTitle());
-        driver.quit();
+        System.out.println("Title verified");
     }
 
 }

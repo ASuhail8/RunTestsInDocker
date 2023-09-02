@@ -12,12 +12,14 @@ public class AmazonLogoTest extends BaseTest {
     public void launchBrowser() {
         driver = initializeBrowser();
         driver.get(PropertyClass.getProperty("amazon"));
+        System.out.println("Browser Launched maximised and amazon entered");
     }
 
     @Test
     public void verifyAmazonLogo() {
         AmazonPage amazonPage = new AmazonPage(driver);
         amazonPage.verifyAmazonLogo();
+        System.out.println("Amazon logo verified");
 
     }
 

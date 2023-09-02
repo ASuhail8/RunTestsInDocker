@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="MyAmazonSuite">
-    <test name="MyTest">
+    <test name="MyTest" parallel="true">
         <classes>
             <class name="com.example.tests.amazon.AmazonTest"/>
             <class name="com.example.tests.amazon.AmazonTitleTest"/>

@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import static com.example.Utils.PropertyClass.getProperty;
 
@@ -40,4 +42,8 @@ public class BaseTest {
         return driver;
     }
 
+    @AfterMethod
+    public void quitDriver(){
+        driver.quit();
+    }
 }

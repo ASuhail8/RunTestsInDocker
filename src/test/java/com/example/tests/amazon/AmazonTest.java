@@ -17,11 +17,12 @@ public class AmazonTest extends BaseTest {
     public void launchBrowser(){
         driver = initializeBrowser();
         driver.get(PropertyClass.getProperty("amazon"));
+        System.out.println("Browser Launched maximised and amazon entered");
     }
 
     @Test
     public void launchAmazon() throws InterruptedException, IOException {
         System.out.println(driver.getTitle());
-        driver.quit();
+        System.out.println("Title printed");
     }
 }
