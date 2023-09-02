@@ -24,9 +24,9 @@
             </includes>
             <useDefaultExcludes>true</useDefaultExcludes>
         </fileSet>
-        <fileSet>
-            <directory>src/test/resources</directory> <!-- Include test resources -->
-            <outputDirectory>/</outputDirectory>
-        </fileSet>
+<!--        <fileSet>-->
+<!--            <directory>src/test/resources</directory> &lt;!&ndash; Include test resources &ndash;&gt;-->
+<!--            <outputDirectory>/</outputDirectory>-->
+<!--        </fileSet>-->
     </fileSets>
 </assembly>
