@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-02T15:42:47 IST" name="MyTestSuite" finished-at="2023-09-02T15:42:51 IST" duration-ms="3901">
+  <suite started-at="2023-09-02T16:21:08 IST" name="MyTestSuite" finished-at="2023-09-02T16:21:14 IST" duration-ms="5886">
     <groups>
     </groups>
-    <test started-at="2023-09-02T15:42:47 IST" name="MyTest" finished-at="2023-09-02T15:42:51 IST" duration-ms="3901">
+    <test started-at="2023-09-02T16:21:08 IST" name="MyTest" finished-at="2023-09-02T16:21:14 IST" duration-ms="5886">
       <class name="com.example.tests.facebook.FacebookTest">
-        <test-method signature="launchFb()[pri:0, instance:com.example.tests.facebook.FacebookTest@727803de]" started-at="2023-09-02T15:42:47 IST" name="launchFb" finished-at="2023-09-02T15:42:49 IST" duration-ms="2254" status="PASS">
+        <test-method signature="launchFb()[pri:0, instance:com.example.tests.facebook.FacebookTest@727803de]" started-at="2023-09-02T16:21:08 IST" name="launchFb" finished-at="2023-09-02T16:21:12 IST" duration-ms="3404" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchFb -->
       </class> <!-- com.example.tests.facebook.FacebookTest -->
       <class name="com.example.tests.flipkart.FlipkartTest">
-        <test-method signature="launchFlipkart()[pri:0, instance:com.example.tests.flipkart.FlipkartTest@2641e737]" started-at="2023-09-02T15:42:47 IST" name="launchFlipkart" finished-at="2023-09-02T15:42:50 IST" duration-ms="3594" status="PASS">
+        <test-method signature="launchFlipkart()[pri:0, instance:com.example.tests.flipkart.FlipkartTest@2641e737]" started-at="2023-09-02T16:21:08 IST" name="launchFlipkart" finished-at="2023-09-02T16:21:13 IST" duration-ms="4858" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchFlipkart -->
       </class> <!-- com.example.tests.flipkart.FlipkartTest -->
       <class name="com.example.tests.amazon.AmazonTest">
-        <test-method signature="launchAmazon()[pri:0, instance:com.example.tests.amazon.AmazonTest@710726a3]" started-at="2023-09-02T15:42:47 IST" name="launchAmazon" finished-at="2023-09-02T15:42:51 IST" duration-ms="3885" status="PASS">
+        <test-method signature="launchAmazon()[pri:0, instance:com.example.tests.amazon.AmazonTest@710726a3]" started-at="2023-09-02T16:21:08 IST" name="launchAmazon" finished-at="2023-09-02T16:21:14 IST" duration-ms="5872" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchAmazon -->
       </class> <!-- com.example.tests.amazon.AmazonTest -->
       <class name="com.example.tests.google.GoogleTest">
-        <test-method signature="launchGoogle()[pri:0, instance:com.example.tests.google.GoogleTest@704921a5]" started-at="2023-09-02T15:42:47 IST" name="launchGoogle" finished-at="2023-09-02T15:42:49 IST" duration-ms="2677" status="PASS">
+        <test-method signature="launchGoogle()[pri:0, instance:com.example.tests.google.GoogleTest@704921a5]" started-at="2023-09-02T16:21:08 IST" name="launchGoogle" finished-at="2023-09-02T16:21:13 IST" duration-ms="4294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchGoogle -->
