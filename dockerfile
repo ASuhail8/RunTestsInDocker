@@ -1,7 +1,7 @@
 FROM ubuntu
 
 #version of chrome
-ENV CHROME_VERSION 113.0.5672.63
+ENV CHROME_VERSION 116.0.5845.140
 ENV EDGE_VERSION 116.0.1938.69
 
 # Workspace
@@ -39,7 +39,7 @@ HEALTHCHECK CMD java -version;google-chrome --version || exit 1
 #ADD .jar under target from host(local) into this image
 #ADD target/SeleniumFramework-0.0.1-SNAPSHOT.jar                          SeleniumFramework-0.0.1-SNAPSHOT.jar
 ADD target/my-app-1.0-SNAPSHOT-fat-tests.jar                            my-app-1.0-SNAPSHOT-fat-tests.jar
-ADD src/test/resources                                                  src/test/resources
+#ADD src/test/resources                                                  src/test/resources
 
 # ADD testng suite files
 ADD main-testng.xml                                              main-testng.xml
