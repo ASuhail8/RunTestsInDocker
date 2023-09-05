@@ -19,23 +19,23 @@ public class BaseTest {
         String browser = System.getProperty("browser") != null ? System.getProperty("browser") : getProperty("browser");
         if(browser.equalsIgnoreCase("chrome")) {
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("--disable-extensions");
+            chromeOptions.addArguments("--disable-dev-shm-usage");
             chromeOptions.addArguments("--headless");
+            chromeOptions.addArguments("--disable-extensions");
             chromeOptions.addArguments("--disable-gpu");
             chromeOptions.addArguments("--no-sandbox");
             chromeOptions.addArguments("--incognito");
             chromeOptions.addArguments("--disable-application-cache");
-            chromeOptions.addArguments("--disable-dev-shm-usage");
             driver = new ChromeDriver(chromeOptions);
         } else if(System.getProperty("browser").equalsIgnoreCase("edge")){
             EdgeOptions edgeOptions = new EdgeOptions();
+            edgeOptions.addArguments("--disable-dev-shm-usage");
             edgeOptions.addArguments("--disable-extensions");
             edgeOptions.addArguments("--headless");
             edgeOptions.addArguments("--disable-gpu");
             edgeOptions.addArguments("--no-sandbox");
             edgeOptions.addArguments("--incognito");
             edgeOptions.addArguments("--disable-application-cache");
-            edgeOptions.addArguments("--disable-dev-shm-usage");
             driver = new EdgeDriver(edgeOptions);
         }
         driver.manage().window().maximize();

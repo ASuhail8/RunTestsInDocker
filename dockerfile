@@ -43,7 +43,7 @@ ADD target/my-app-1.0-SNAPSHOT-fat-tests.jar                            my-app-1
 
 # ADD testng suite files
 ADD main-testng.xml                                              main-testng.xml
-ADD TestngXmlFiles                                            TestngXmlFiles
+ADD TestngXmlFiles                                               TestngXmlFiles
 # ADD health check script
 #ADD healthcheck.sh                                      healthcheck.sh
 #RUN dos2unix healthcheck.sh
