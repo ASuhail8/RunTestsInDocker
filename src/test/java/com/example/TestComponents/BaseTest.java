@@ -42,11 +42,6 @@ public class BaseTest {
         return driver;
     }
 
-    @BeforeMethod
-    public void beforeMethod(){
-        System.out.println("before method of base test");
-    }
-
     @AfterMethod
     public void quitDriver(){
         driver.quit();

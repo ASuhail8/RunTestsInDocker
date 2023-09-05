@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [MyTestSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="methods" name="MyTest(failed)">
+<suite name="Failed suite [MyFlipkartSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="MyTest(failed)">
     <classes>
-      <class name="com.example.tests.facebook.FacebookTest">
-        <methods>
-          <include name="launchFb"/>
-        </methods>
-      </class> <!-- com.example.tests.facebook.FacebookTest -->
-      <class name="com.example.tests.google.GoogleTest">
-        <methods>
-          <include name="launchGoogle"/>
-        </methods>
-      </class> <!-- com.example.tests.google.GoogleTest -->
       <class name="com.example.tests.flipkart.FlipkartTest">
         <methods>
           <include name="launchFlipkart"/>
+          <include name="quitDriver"/>
         </methods>
       </class> <!-- com.example.tests.flipkart.FlipkartTest -->
-      <class name="com.example.tests.amazon.AmazonTest">
-        <methods>
-          <include name="launchAmazon"/>
-        </methods>
-      </class> <!-- com.example.tests.amazon.AmazonTest -->
     </classes>
   </test> <!-- MyTest(failed) -->
-</suite> <!-- Failed suite [MyTestSuite] -->
+</suite> <!-- Failed suite [MyFlipkartSuite] -->

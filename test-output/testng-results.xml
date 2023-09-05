@@ -2,24 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-02T18:10:18 IST" name="Command line suite" finished-at="2023-09-02T18:10:31 IST" duration-ms="13377">
+  <suite started-at="2023-09-05T12:38:18 IST" name="MyFlipkartSuite" finished-at="2023-09-05T12:38:21 IST" duration-ms="2816">
     <groups>
     </groups>
-    <test started-at="2023-09-02T18:10:18 IST" name="Command line test" finished-at="2023-09-02T18:10:31 IST" duration-ms="13377">
-      <class name="com.example.tests.amazon.AmazonTitleTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.example.tests.amazon.AmazonTitleTest@cb0ed20]" started-at="2023-09-02T18:10:18 IST" name="launchBrowser" finished-at="2023-09-02T18:10:25 IST" duration-ms="7222" status="PASS">
+    <test started-at="2023-09-05T12:38:18 IST" name="MyTest" finished-at="2023-09-05T12:38:21 IST" duration-ms="2816">
+      <class name="com.example.tests.flipkart.FlipkartTest">
+        <test-method signature="launchFlipkart()[pri:0, instance:com.example.tests.flipkart.FlipkartTest@481a15ff]" started-at="2023-09-05T12:38:18 IST" name="launchFlipkart" finished-at="2023-09-05T12:38:21 IST" duration-ms="2800" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="verifyTitle()[pri:0, instance:com.example.tests.amazon.AmazonTitleTest@cb0ed20]" started-at="2023-09-02T18:10:25 IST" name="verifyTitle" finished-at="2023-09-02T18:10:31 IST" duration-ms="5926" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitle -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:com.example.tests.amazon.AmazonTitleTest@cb0ed20]" started-at="2023-09-02T18:10:31 IST" name="quitDriver" finished-at="2023-09-02T18:10:31 IST" duration-ms="147" status="PASS">
+        </test-method> <!-- launchFlipkart -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:com.example.tests.flipkart.FlipkartTest@481a15ff]" started-at="2023-09-05T12:38:21 IST" name="quitDriver" finished-at="2023-09-05T12:38:21 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-      </class> <!-- com.example.tests.amazon.AmazonTitleTest -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+      </class> <!-- com.example.tests.flipkart.FlipkartTest -->
+    </test> <!-- MyTest -->
+  </suite> <!-- MyFlipkartSuite -->
 </testng-results>
