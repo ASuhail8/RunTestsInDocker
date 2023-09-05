@@ -1,7 +1,7 @@
 FROM ubuntu
 
 #version of chrome
-ENV CHROME_VERSION 116.0.5845.140
+ENV CHROME_VERSION 116.0.5845.163
 ENV EDGE_VERSION 116.0.1938.69
 
 # Workspace
@@ -18,8 +18,8 @@ RUN wget -q http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stab
 RUN apt-get install ./google-chrome-stable_${CHROME_VERSION}-1_amd64.deb -y >> chrome.log
 
 #installing edge
-RUN wget -q https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_${EDGE_VERSION}-1_amd64.deb --no-verbose
-RUN apt-get install ./microsoft-edge-stable_${EDGE_VERSION}-1_amd64.deb -y
+#RUN wget -q https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_${EDGE_VERSION}-1_amd64.deb --no-verbose
+#RUN apt-get install ./microsoft-edge-stable_${EDGE_VERSION}-1_amd64.deb -y
 
 #installing Chromedriver and moving it to /usr/bin
 #RUN wget https://chromedriver.storage.googleapis.com/${CHROME_VERSION}/chromedriver_linux64.zip --no-verbose
