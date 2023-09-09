@@ -1,4 +1,5 @@
 FROM ubuntu
+ARG DEBIAN_FRONTEND=noninteractive
 
 #version of chrome
 ENV CHROME_VERSION 116.0.5845.140
