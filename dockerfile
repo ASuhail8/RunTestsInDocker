@@ -1,7 +1,7 @@
 FROM ubuntu
 
 #version of chrome
-ENV CHROME_VERSION 116.0.5845.163
+ENV CHROME_VERSION 116.0.5845.140
 ENV EDGE_VERSION 116.0.1938.69
 
 # Workspace
@@ -42,8 +42,8 @@ ADD target/my-app-1.0-SNAPSHOT-fat-tests.jar                            my-app-1
 #ADD src/test/resources                                                  src/test/resources
 
 # ADD testng suite files
-ADD main-testng.xml                                              main-testng.xml
-ADD TestngXmlFiles                                               TestngXmlFiles
+#ADD main-testng.xml                                              main-testng.xml
+#ADD TestngXmlFiles                                               TestngXmlFiles
 # ADD health check script
 #ADD healthcheck.sh                                      healthcheck.sh
 #RUN dos2unix healthcheck.sh

@@ -16,6 +16,7 @@ public class FlipkartTest extends BaseTest {
         driver = initializeBrowser();
         driver.get(PropertyClass.getProperty("flipkart"));
         System.out.println(driver.getTitle());
+        System.out.println("Reading testdata :"+PropertyClass.getTestcaseNames("Sheet1"));
         driver.quit();
     }
 }
