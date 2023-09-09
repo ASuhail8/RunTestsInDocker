@@ -49,4 +49,8 @@ ADD target/my-app-1.0-SNAPSHOT-fat-tests.jar                            my-app-1
 #RUN dos2unix healthcheck.sh
 
 #TAGS
-ENTRYPOINT java -DuploadToS3=$UPLOADS3FLAG -Dbrowser=$BROWSER -jar my-app-1.0-SNAPSHOT-fat-tests.jar -testjar my-app-1.0-SNAPSHOT-fat-tests.jar -xmlpathinjar $MODULE
+#ENTRYPOINT java -DuploadToS3=$UPLOADS3FLAG -Dbrowser=$BROWSER -jar my-app-1.0-SNAPSHOT-fat-tests.jar -testjar my-app-1.0-SNAPSHOT-fat-tests.jar -xmlpathinjar $MODULE
+
+# Set the entry point to a script that runs your tests and uploads results to S3
+COPY entrypoint.sh              entrypoint.sh
+ENTRYPOINT ["/bin/bash", "/app/entrypoint.sh"]
