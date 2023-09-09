@@ -70,7 +70,7 @@ public class BaseTest {
 
             // Specify the S3 bucket name and the local directory where your test result files are stored
             String bucketName = "my-app-test-results";
-            String localDirectory = "reports/";
+            String localDirectory = "reports/index.html";
 
             // Upload files to S3
             s3Client.putObject(new PutObjectRequest(bucketName, getCurrentDateAndTime() + "-my-app-test-reports/index.html", new File(localDirectory)));
