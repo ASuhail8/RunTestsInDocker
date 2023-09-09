@@ -1,3 +1,5 @@
 test-output
 target
 .gitignore
+/reports/
+src/main/java/com/example/S3Upload.java

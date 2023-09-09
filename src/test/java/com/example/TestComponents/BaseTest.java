@@ -4,6 +4,9 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.example.Utils.PropertyClass;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,6 +16,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 
 import java.io.File;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -66,10 +70,10 @@ public class BaseTest {
 
             // Specify the S3 bucket name and the local directory where your test result files are stored
             String bucketName = "my-app-test-results";
-            String localDirectory = "test-output/emailable-report.html";
+            String localDirectory = "reports/";
 
             // Upload files to S3
-            s3Client.putObject(new PutObjectRequest(bucketName, getCurrentDateAndTime() + "-test-output/emailable-report.html", new File(localDirectory)));
+            s3Client.putObject(new PutObjectRequest(bucketName, getCurrentDateAndTime() + "-my-app-test-reports/index.html", new File(localDirectory)));
             System.out.println("uploading to S3 completed");
         }
     }
@@ -78,6 +82,17 @@ public class BaseTest {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         return LocalDateTime.now();
     }
+
+    public String getScreenshot(String testName, WebDriver driver) throws IOException {
+
+        TakesScreenshot t = (TakesScreenshot) driver;
+        File src = t.getScreenshotAs(OutputType.FILE);
+        File path = new File(System.getProperty("user.dir") + "/reports/" + testName + ".png");
+        FileUtils.copyFile(src, path);
+        return System.getProperty("user.dir") + "/reports/" + testName + ".png";
+
+    }
+
 }
 
 
