@@ -12,6 +12,7 @@ RUN echo "Updating Packages.";apt-get update -y  >>  update.log
 RUN echo "Installing Jdk..";apt-get install openjdk-11-jdk -y >> java.log
 RUN echo "Installing wget...";apt-get install wget -y >> wget.log
 RUN echo "Installing unzip....";apt-get install unzip -y >> unzip.log
+RUN echo "Installing AWS CLI....";apt-get install -y awscli
 
 #installing Chrome
 RUN wget -q http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}-1_amd64.deb --no-verbose
