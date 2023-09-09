@@ -49,4 +49,4 @@ ADD target/my-app-1.0-SNAPSHOT-fat-tests.jar                            my-app-1
 #RUN dos2unix healthcheck.sh
 
 #TAGS
-ENTRYPOINT java -Dbrowser=$BROWSER -jar my-app-1.0-SNAPSHOT-fat-tests.jar -testjar my-app-1.0-SNAPSHOT-fat-tests.jar -xmlpathinjar $MODULE
+ENTRYPOINT java -DuploadToS3=$UPLOADS3FLAG -Dbrowser=$BROWSER -jar my-app-1.0-SNAPSHOT-fat-tests.jar -testjar my-app-1.0-SNAPSHOT-fat-tests.jar -xmlpathinjar $MODULE

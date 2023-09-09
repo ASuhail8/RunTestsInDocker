@@ -3,6 +3,7 @@ package com.example.TestComponents;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.example.Utils.PropertyClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -53,20 +54,27 @@ public class BaseTest {
         driver.quit();
     }
 
+    public static String uploadToS3;
+
     @AfterSuite
     public void UploadToS3() {
-        // Initialize Amazon S3 client
-        AmazonS3 s3Client = AmazonS3ClientBuilder.standard().build();
+        uploadToS3 = System.getProperty("uploadToS3") != null ? System.getProperty("uploadToS3") : PropertyClass.getProperty("uploadToS3");
+        if (uploadToS3.equalsIgnoreCase("true")) {
+            System.out.println("uploading to S3 Started");
+            // Initialize Amazon S3 client
+            AmazonS3 s3Client = AmazonS3ClientBuilder.standard().build();
 
-        // Specify the S3 bucket name and the local directory where your test result files are stored
-        String bucketName = "my-app-test-results";
-        String localDirectory = "test-output/emailable-report.html";
+            // Specify the S3 bucket name and the local directory where your test result files are stored
+            String bucketName = "my-app-test-results";
+            String localDirectory = "test-output/emailable-report.html";
 
-        // Upload files to S3
-        s3Client.putObject(new PutObjectRequest(bucketName, getCurrentDateAndTime()+"-test-output/emailable-report.html", new File(localDirectory)));
+            // Upload files to S3
+            s3Client.putObject(new PutObjectRequest(bucketName, getCurrentDateAndTime() + "-test-output/emailable-report.html", new File(localDirectory)));
+            System.out.println("uploading to S3 completed");
+        }
     }
 
-    public LocalDateTime getCurrentDateAndTime(){
+    public LocalDateTime getCurrentDateAndTime() {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         return LocalDateTime.now();
     }
