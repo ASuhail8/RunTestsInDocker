@@ -2,6 +2,7 @@
 <suite name="MyGoogleSuite">
     <listeners>
         <listener class-name="com.example.TestComponents.ListenersTest"/>
+        <listener class-name="com.example.TestComponents.ExecutionListener"/>
     </listeners>
     <test name="MyTest">
         <classes>

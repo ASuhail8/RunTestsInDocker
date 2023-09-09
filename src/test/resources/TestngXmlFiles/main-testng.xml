@@ -2,6 +2,7 @@
 <suite name="MyTestSuite">
     <listeners>
         <listener class-name="com.example.TestComponents.ListenersTest"/>
+        <listener class-name="com.example.TestComponents.ExecutionListener"/>
     </listeners>
     <test name="MyTest" parallel="true">
         <classes>
@@ -9,6 +10,8 @@
             <class name="com.example.tests.flipkart.FlipkartTest"/>
             <class name="com.example.tests.facebook.FacebookTest"/>
             <class name="com.example.tests.google.GoogleTest"/>
+            <class name="com.example.tests.amazon.AmazonTitleTest"/>
+            <class name="com.example.tests.amazon.AmazonLogoTest"/>
         </classes>
     </test>
 </suite>

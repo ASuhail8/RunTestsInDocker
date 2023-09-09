@@ -75,7 +75,7 @@ public class PropertyClass {
     }
 
     public static ArrayList<String> getTestcaseNames(String sheetname) throws IOException {
-        InputStream inputStream = PropertyClass.class.getClassLoader().getResourceAsStream("testdata.xlsx");
+        InputStream inputStream = PropertyClass.class.getClassLoader().getResourceAsStream("testdata.csv");
         XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
         int count = workbook.getNumberOfSheets();
         ArrayList<String> al = new ArrayList<String>();

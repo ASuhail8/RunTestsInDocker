@@ -58,27 +58,7 @@ public class BaseTest {
         driver.quit();
     }
 
-    public static String uploadToS3;
-
-    @AfterSuite
-    public void UploadToS3() {
-        uploadToS3 = System.getProperty("uploadToS3") != null ? System.getProperty("uploadToS3") : PropertyClass.getProperty("uploadToS3");
-        if (uploadToS3.equalsIgnoreCase("true")) {
-            System.out.println("uploading to S3 Started");
-            // Initialize Amazon S3 client
-            AmazonS3 s3Client = AmazonS3ClientBuilder.standard().build();
-
-            // Specify the S3 bucket name and the local directory where your test result files are stored
-            String bucketName = "my-app-test-results";
-            String localDirectory = "reports/index.html";
-
-            // Upload files to S3
-            s3Client.putObject(new PutObjectRequest(bucketName, getCurrentDateAndTime() + "-my-app-test-reports/index.html", new File(localDirectory)));
-            System.out.println("uploading to S3 completed");
-        }
-    }
-
-    public LocalDateTime getCurrentDateAndTime() {
+    public static LocalDateTime getCurrentDateAndTime() {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         return LocalDateTime.now();
     }
