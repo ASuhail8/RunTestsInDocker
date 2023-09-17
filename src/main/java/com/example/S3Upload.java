@@ -2,12 +2,10 @@ package com.example;
 
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.SdkClientException;
-import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.PutObjectRequest;
-import com.example.Utils.PropertyClass;
 
 import java.io.File;
 import java.time.LocalDateTime;
@@ -17,7 +15,7 @@ public class S3Upload {
 
     public static void main(String[] args) {
 
-        System.out.println("uploading to S3 Started");
+        /*System.out.println("uploading to S3 Started");
         // Initialize Amazon S3 client
         AmazonS3 s3Client = AmazonS3ClientBuilder.standard().build();
 
@@ -27,12 +25,16 @@ public class S3Upload {
 
         // Upload files to S3
         s3Client.putObject(new PutObjectRequest(bucketName, getCurrentDateAndTime() + "-my-app-test-reports/index.html", new File(localDirectory)));
-        System.out.println("uploading to S3 completed");
+        System.out.println("uploading to S3 completed");*/
+
+        uploadAllFilesToS3();
+
     }
 
-    public static LocalDateTime getCurrentDateAndTime() {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        return LocalDateTime.now();
+    public static String getCurrentDateAndTime() {
+        LocalDateTime currentDateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-dd-MM HH:mm");
+        return currentDateTime.format(formatter);
     }
 
 
@@ -43,12 +45,12 @@ public class S3Upload {
         // Initialize Amazon S3 client with your AWS credentials
         AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
                 .withRegion(clientRegion)
-                .withCredentials(new ProfileCredentialsProvider("your-aws-profile")) // Change to your AWS profile
+               // .withCredentials(new ProfileCredentialsProvider("your-aws-profile")) // Change to your AWS profile
                 .build();
 
         // Specify the S3 bucket name and the local directory where your test result files are stored
-        String bucketName = "your-s3-bucket-name";
-        String localDirectory = "/test-results";
+        String bucketName = "my-app-test-results";
+        String localDirectory = "reports";
 
         try {
             // List all files under the local directory
@@ -59,7 +61,7 @@ public class S3Upload {
                 for (File file : files) {
                     if (file.isFile()) {
                         // Upload each file to S3
-                        String key = "test-results/" + file.getName(); // S3 key (path) for the file
+                        String key = getCurrentDateAndTime()+"-ecommerce-test-results/" + file.getName(); // S3 key (path) for the file
                         s3Client.putObject(new PutObjectRequest(bucketName, key, file));
                         System.out.println("Uploaded file: " + file.getName());
                     }
